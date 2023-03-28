@@ -32,15 +32,17 @@ const Home = () => {
       </div>
       <div className="row justify-content-center">
         <div className="col-12 d-flex justify-content-center">
-          <div className="show-amount   bg-white shadow-lg ">1 item left</div>
+          <div className="show-amount   bg-white shadow-lg border border-1 ">
+            1 item left
+          </div>
         </div>
       </div>
       <div className="row justify-content-center">
         <div className="col-12  d-flex justify-content-center ">
-          <div className="botton-structure-1  bg-white shadow-lg border border-1"></div>
+          <div className="bottom-structure-1  bg-white shadow-lg "></div>
         </div>
         <div className="col-12  d-flex justify-content-center ">
-          <div className="botton-structure-2  bg-white shadow-lg border border-1"></div>
+          <div className="bottom-structure-2  bg-white shadow-lg "></div>
         </div>
       </div>
     </div>
