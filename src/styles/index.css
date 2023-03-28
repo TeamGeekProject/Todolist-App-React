@@ -1,6 +1,40 @@
-h1{
-    background-color: lime;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.container{
+    background-color: ghostwhite;
+    width: auto;
+    height: 700px;
+}
+
+.Title{
+    text-align: center;
+    color: hotpink;
+    font-family: 'Amatic SC', cursive;
+    font-size: 100px;
+
+   
+}
+
+li{
+    text-align: center;
+    list-style-type: none;
+    outline-color: gainsboro;
+    outline-style: solid;
+    outline-width: 1px;
+    width:auto;
+    height: auto;
+    background-color: white;
+    
+}
+
+.itemFilter{
+    background-color: white;
+    outline-style: solid;
+    outline-color: gainsboro;
+    outline-width: 1px;
+    color: rgba(128, 128, 128, 0.74);
+    width: auto;
+    height: auto;
+    font-family:monospace;
+    
 }
 /* 
 
