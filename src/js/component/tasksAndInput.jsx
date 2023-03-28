@@ -23,10 +23,7 @@ function TasksAndInput(props) {
     setArrayOfTasks(ar2.filter((item, i) => i != index));
   }
 
-  function countTheTasks() {
-    let ar3 = arrayOfTasks;
-    setCount(ar3.length((item, i)=> i== index + 1));
-  }
+  function countTheTasks() {}
 
   return (
     <div className="container">
@@ -45,6 +42,7 @@ function TasksAndInput(props) {
           </form>
 
           <div className="todo text-center me-5 ms-3">
+            
             <ul>
               {arrayOfTasks.map((item, index) => (
                 <li>
