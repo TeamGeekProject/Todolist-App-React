@@ -30,39 +30,53 @@ function TasksAndInput(props) {
       <h1 className="Title text-center">Todo List</h1>
 
       <div className="conatiner-flex text-center ms-3">
-        <div className="Task text-center" style={{ fontSize: "20px" }}>
-          <form onSubmit={submitWrapper}>
-            <input
-              className="text-center"
-              placeholder="No tasks, add a task!"
-              type="text"
-              onChange={(e) => setInput(e.target.value)}
-              value={input}
-            ></input>
-          </form>
+        <div className="Task text-center ">
+          <div className="row  justify-content-center">
+            <div className="col-md-6 col-8">
+              <form onSubmit={submitWrapper}>
+                <input
+                  className="text-center form-control"
+                  placeholder="No tasks, add a task!"
+                  type="text"
+                  onChange={(e) => {
+                    setInput(e.target.value);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      setCount(count + 1);
+                    }
+                  }}
+                  value={input}
+                ></input>
+              </form>
+            </div>
+          </div>
 
-          <div className="todo text-center me-5 ms-3">
-            
-            <ul>
-              {arrayOfTasks.map((item, index) => (
-                <li>
-                  <span>{item}</span>
+          <div className="row justify-content-center">
+            <div className="col-md-6 col-8">
+              <ul className="list-group ">
+                {arrayOfTasks.map((item, index) => (
+                  <li className="list-group-item rounded">
+                    <span className="float-start items-style">{item}</span>
 
-                  <span onClick={() => deleteTheTask(index)}>
-                    {" "}
-                    <FontAwesomeIcon
-                      icon={faXmark}
-                      style={{ height: "18px", color: "darksalmon" }}
-                    ></FontAwesomeIcon>
-                  </span>
-                </li>
-              ))}
+                    <span
+                      className="float-end text-danger"
+                      onClick={() => {
+                        deleteTheTask(index);
+                        setCount(count - 1);
+                      }}
+                    >
+                      {" "}
+                      <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
+                    </span>
+                  </li>
+                ))}
 
-              <div className="itemFilter" style={{ fontSize: "20px" }}>
-                <h2>{count} item/s left...</h2>
-                <span onChange={() => countTheTasks(index + 1)}> </span>
-              </div>
-            </ul>
+                <div className="itemFilter rounded">
+                  <h2>{count} item/s left...</h2>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
